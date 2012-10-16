@@ -1,0 +1,65 @@
+﻿@model TeaEWebStore.Models.Tea
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Tea</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CountryID, "Country")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CountryID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CountryID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TeaTypeID, "TeaType")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TeaTypeID", String.Empty)
+            @Html.ValidationMessageFor(model => model.TeaTypeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TeaArtUrl)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TeaArtUrl)
+            @Html.ValidationMessageFor(model => model.TeaArtUrl)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TeaEWebStore.Models.Tea>
+
+@{
+    ViewBag.Title = "Index";
+}
+@using TeaEWebStore.Helpers
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Country
+        </th>
+        <th>
+            TeaType
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country.Name)
+        </td>
+        <td>
+            @HtmlHelpers.Truncate(item.TeaType.Name, 20)
+        </td>
+        <td>
+            @HtmlHelpers.Truncate(item.Title, 20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TeaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TeaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TeaID })
+        </td>
+    </tr>
+}
+
+</table>

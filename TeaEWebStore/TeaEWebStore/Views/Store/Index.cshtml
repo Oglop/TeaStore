@@ -1,0 +1,12 @@
+﻿@model IEnumerable<TeaEWebStore.Models.TeaType>
+@{
+    ViewBag.Title = "Store";
+}
+
+<h2>Tea types</h2>
+<ul>
+    @foreach (var t in Model)
+    {
+        <li>@Html.ActionLink(t.Name, "Browse", new { TeaType = t.Name })</li>
+    }
+</ul>

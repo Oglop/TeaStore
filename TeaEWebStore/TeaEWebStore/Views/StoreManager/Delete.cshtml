@@ -1,0 +1,43 @@
+﻿@model TeaEWebStore.Models.Tea
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Tea</legend>
+
+    <div class="display-label">Country</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country.Name)
+    </div>
+
+    <div class="display-label">TeaType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeaType.Name)
+    </div>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">TeaArtUrl</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeaArtUrl)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

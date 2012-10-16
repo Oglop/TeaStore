@@ -1,0 +1,19 @@
+﻿@model TeaEWebStore.Models.TeaType
+
+@{
+    ViewBag.Title = "Browse" + Model.Name;
+}
+
+<h2>@String.Format("{0}s", Model.Name)</h2>
+<ul>
+    @foreach (var tea in Model.Teas) 
+    { 
+        <!--<li>@Html.ActionLink(tea.Title, "Details", new { TeaID = tea.TeaID })</li>
+        
+            
+            -->
+        <li>
+            <a href="@Url.Action("Details", new {id = tea.TeaID })"><span>@tea.Title</span></a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TeaEWebStore.Models.Tea>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<table>
+    <tr>
+
+        <th>
+            Title
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            TeaArtUrl
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@Url.Action("Details", new {id = item.TeaID })"><span>@item.Title</span></a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeaArtUrl)
+        </td>
+    </tr>
+}
+
+</table>

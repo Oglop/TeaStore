@@ -1,0 +1,40 @@
+﻿@model TeaEWebStore.Models.Tea
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Tea</legend>
+
+    <div class="display-label">Country</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country.Name)
+    </div>
+
+    <div class="display-label">TeaType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeaType.Name)
+    </div>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">TeaArtUrl</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeaArtUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TeaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
