@@ -1,9 +1,22 @@
+/* Colors
+    White #FEFFF8
+    LightGreen #EDF491
+    DarkGreen #575B25
+    Black #0C0D05
+    LightBlue #DEDEDE
+    DarkBlue: #13738F
+    PinkVisited #EF98AF
+    PinkHoover #D01547
+
+*/
+
+
 body
 {
-    font-size: .85em;
-    font-family: Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, Sans-Serif;
+    color: #0C0D05;
+    background-color: #FEFFF8;
     
 }
 
@@ -15,20 +28,58 @@ section {
 
 header 
 {
-    background-color: #55B;
-    color: white;
-	/*float: left;*/
+    background-color: #0C0D05;
+    color: #FEFFF8;
 	z-index: 2;
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	
+	padding: 4px;
+}
+
+header a:link
+{
+    color: #13738F;
+}
+
+header a:visited
+{
+    color: #EF98AF;
+}
+
+header a:hover
+{
+    color: #D01547;
+}
+
+header a:active
+{
+    color: #D01547;
+}
+
+a:link
+{
+    color: #DEDEDE;
+}
+
+a:visited
+{
+    color: #EF98AF;
+}
+
+a:hover
+{
+    color: #D01547;
+}
+
+a:active
+{
+    color: #D01547;
 }
 
 #headerContent
 {
-    background-color: #ACE;
     width: 860px;
     height: 2em;
     margin: auto;
@@ -39,7 +90,10 @@ section
 {
     width: 860px;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    padding-top: 2em;
+    background-color: #FEFFF8;
+    min-height: 600px;
 }
 
 footer
@@ -51,13 +105,34 @@ footer
 {
     width: 860px;
     margin: auto;
+    height: 2em;
+    background-color: #EDF491;
 }
 
 #footerContent p
 {
     float: right;
+    margin: 0.3em;
 }
 
+h1
+{
+    font-size: 4em;
+    font-weight: bold;
+    color: #575B25;
+}
+
+h2
+{
+    font-size: 2em;
+    color: #575B25;
+}
+
+h3
+{
+    font-size: 1em;
+    color: #575B25;
+}
 
 
 /* Styles for basic forms
@@ -94,6 +169,24 @@ textarea
 .editor-field 
 {
     margin:0.5em 0 0 0;
+}
+
+table
+{
+    border: 2px solid #DEDEDE;
+    background-color: #FEFFF8;
+    color: #13738F;
+}
+th
+{
+    font-weight: bold;
+    min-width: 4em;
+    padding: 2px;
+}
+    
+td
+{
+    padding: 2px;
 }
 
 
