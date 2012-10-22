@@ -190,6 +190,8 @@ td
 }
 
 
+
+
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error
@@ -235,6 +237,35 @@ td
 #searchForm
 {
     float: right;    
+}
+
+#browseMenu
+{
+    margin: 0.75em;
+    padding: 0.5em;
+    float: left;
+    display: block;
+    min-height: 500px;
+    border-right: 1px Solid #DEDEDE;
+}
+
+#shoppingCart
+{
+    margin-right: 2em;
+    float: right;
+    display: inline;    
+}
+
+#checkoutButton
+{
+    padding: 0.7em;
+    background-color: #D01547;
+    float: right;
+}
+
+#checkoutButton a
+{
+    color: #FEFFF8;
 }
 
 

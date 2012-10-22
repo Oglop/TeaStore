@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TeaEWebStore.Models.TeaType>
+<div id="browseMenu">
+    <ul>
+        @foreach (var item in Model) {
+            <li>
+                @Html.ActionLink(item.Name, "Browse", "Store", new { TeaType = item.Name}, null)
+            </li>
+        }
+    </ul>
+</div>

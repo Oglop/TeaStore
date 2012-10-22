@@ -7,7 +7,7 @@
 <h2>Tea: @Model.Title</h2>
 <div id="details">
     <p>@Model.Title</p>
-    <p>Price: @String.Format("{0:F}", @Model.Price)</p>
+    <p>Price: @String.Format("{0:C}", @Model.Price)</p>
     <p class="button">
         @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.TeaID }, "")
     </p>

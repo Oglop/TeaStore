@@ -33,7 +33,7 @@ type="text/javascript"></script>
 <h3>
     <em>Review</em> your cart:
  </h3>
-<p class="button">
+<p id="checkoutButton">
     @Html.ActionLink("Checkout>>", "AddressAndPayment", "Checkout")
 </p>
 <div id="update-message">
@@ -49,8 +49,8 @@ type="text/javascript"></script>
     {
         <tr id="row-@item.RecordId">
             <td>@Html.ActionLink(item.Tea.Title, "Details", "Store", new { id = item.TeaId }, null)</td>
-            <td>@item.Tea.Price</td>
-            <td id="item-count-@item.RecordId">@item.Count</td>
+            <td>@String.Format("{0:C}", item.Tea.Price)</td>
+            <td id="item-count-@item.RecordId">@item.Count @Html.ActionLink("One more", "AddToCart", "ShoppingCart", new { id = item.TeaId }, "")</td>
             <td><a href="#" class="RemoveLink" data-id="@item.RecordId">Remove from cart</a></td>
         </tr>
     }
@@ -58,6 +58,6 @@ type="text/javascript"></script>
         <td>Total</td>
         <td></td>
         <td></td>
-        <td id="cart-total">@Model.CartTotal</td>
+        <td id="cart-total">@String.Format("{0:C}", Model.CartTotal)</td>
     </tr>
 </table>

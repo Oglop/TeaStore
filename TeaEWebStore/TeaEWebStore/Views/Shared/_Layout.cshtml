@@ -16,10 +16,13 @@
                     <li><a href="/" id="current">Home</a></li>
                     <li><a href="/Store/">Store</a></li>
                     <li id="searchForm">@using (Html.BeginForm("Search", "Store", FormMethod.Get)){ @Html.TextBox("Querry")  <input type="submit" value="Find" /> }</li>
+                    <li id="shoppingCart">@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
                 </ul>
             </div>
+            
         </header>
         <section>
+            @{Html.RenderAction("TeaTypesMenu", "Store");}
             @RenderBody()
         </section>
         <footer>

@@ -52,5 +52,14 @@ namespace TeaEWebStore.Controllers
             }
             return View(teas);
         }
+
+        //
+        // Get: /Store/TeaTypes
+        [ChildActionOnly]
+        public ActionResult TeaTypesMenu() 
+        {
+            var types = db.TeaTypes.ToList();
+            return PartialView(types);
+        }
     }
 }
